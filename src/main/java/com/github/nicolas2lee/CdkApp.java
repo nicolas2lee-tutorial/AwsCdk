@@ -1,6 +1,7 @@
 package com.github.nicolas2lee;
 
 import com.github.nicolas2lee.stack.EcsStack;
+import com.github.nicolas2lee.stack.LambdaStack;
 import software.amazon.awscdk.App;
 import software.amazon.awscdk.Environment;
 import software.amazon.awscdk.StackProps;
@@ -32,6 +33,7 @@ public class CdkApp {
 
                 // For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html
                 .build());
+        new LambdaStack(app, "UppercaseLambdaStack");
 
         app.synth();
     }
